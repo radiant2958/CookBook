@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products with Limited Use</title>
+</head>
+<body>
+    <h1>Products with Limited Use</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Total Weight</th>
+        </tr>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.total_weight }}</td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="3">No products found.</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
